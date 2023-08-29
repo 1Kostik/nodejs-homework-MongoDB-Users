@@ -7,7 +7,9 @@ const {
   getById,
   getAll,
 } = require("./contacts");
+const {uploadAvatar}=require("./user")
 module.exports = {
+  uploadAvatar,
   current,
   logout,
   updateSubscriptionUser,
