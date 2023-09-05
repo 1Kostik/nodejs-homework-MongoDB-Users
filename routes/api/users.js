@@ -28,6 +28,4 @@ router.patch(
   upload.single("avatar"),resize,
   UserController.uploadAvatar
 );
-
-
 module.exports = router;

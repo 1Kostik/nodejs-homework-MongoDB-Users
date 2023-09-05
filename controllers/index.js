@@ -1,3 +1,4 @@
+
 const {
   register,
   login,
@@ -7,6 +8,7 @@ const {
   verify,
   resendVerifyEmail,
 } = require("./auth");
+
 const {
   updateFavorite,
   updateById,
@@ -15,10 +17,11 @@ const {
   getById,
   getAll,
 } = require("./contacts");
+
 const { uploadAvatar } = require("./user");
 module.exports = {
   verify,
-  resendVerifyEmail,
+ resendVerifyEmail,
   uploadAvatar,
   current,
   logout,
