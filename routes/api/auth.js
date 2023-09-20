@@ -1,5 +1,8 @@
 const express = require("express");
 const {
+
+  resendVerifyEmail,
+  verify,
   register,
   login,
   logout,
@@ -15,6 +18,9 @@ router.post(
   validateBody(schemas.registerSchema),
   ctrlWrapper(register)
 );
+
+router.get("/verify/:token",ctrlWrapper(verify));
+router.post('/verify', validateBody(schemas.emailSchema), ctrlWrapper(resendVerifyEmail));
 router.post("/login", validateBody(schemas.loginSchema), ctrlWrapper(login));
 router.post("/logout", authenticate, ctrlWrapper(logout));
 router.get("/current", authenticate, ctrlWrapper(current));

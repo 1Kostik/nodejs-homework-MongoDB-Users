@@ -9,7 +9,7 @@ const resize = async (req, res, next) => {
     await image.writeAsync(path);
     next();
   } catch (error) {
-    next(HttpError(404));
+    next(HttpError(401));
   }
 };
 module.exports = resize;
